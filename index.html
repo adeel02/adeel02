@@ -1,417 +1,804 @@
-<!-- created by : SoloLearner -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    body{
-      margin : 0;
-      padding : 0;
-      box-sizing : border-box;
-    }
-    div{
-      vertical-align: top;
-      font-size: 0;
-    }
-    #pipe1{
-      display: inline-block;
-      height: 50px;
-      width: 50px;
-      background-color: teal;
-      transition: all 0.5s;
-    }
-    #pipe1::after{
-      content: "";
-      display: block;
-      height: 30px;
-      width: 10px;
-      background-color: skyblue;
-      position: relative;
-      top: -10px;
-    }
-    #pipe1::before{
-      content: "";
-      display: block;
-      height: 10px;
-      width: 30px;
-      background-color: skyblue;
-      position: relative;
-      top: calc(50% - 5px);
-      left: calc(50% - 15px);
-    }
-    #pipe2{
-      display: inline-block;
-      height: 50px;
-      width: 50px;
-      background-color: teal;
-      transition: all 0.5s;
-    }
-    #pipe2::after{
-      content: "";
-      display: block;
-      height: 30px;
-      width: 10px;
-      background-color: skyblue;
-      position: relative;
-      top: calc(50% - 15px);
-    }
-    #pipe2::before{
-      content: "";
-      display: block;
-      height: 10px;
-      width: 30px;
-      background-color: skyblue;
-      position: relative;
-      top: calc(50% - 5px);
-      left: calc(50% - 15px);
-    }
-    #pipe3{
-      display: inline-block;
-      height: 50px;
-      width: 50px;
-      background-color: teal;
-      transition: all 0.5s;
-    }
-    #pipe3::after{
-      content: "";
-      display: block;
-      height: 30px;
-      width: 10px;
-      background-color: skyblue;
-      position: relative;
-      top: -10px;
-    }
-    #pipe3::before{
-      content: "";
-      display: block;
-      height: 10px;
-      width: 30px;
-      background-color: skyblue;
-      position: relative;
-      top: calc(50% - 5px);
-      left: calc(50% - 15px);
-    }
-    #pipe4{
-      display: inline-block;
-      height: 50px;
-      width: 50px;
-      background-color: teal;
-      transition: all 0.5s;
-    }
-    #pipe4::after{
-      content: "";
-      display: block;
-      height: 50px;
-      width: 10px;
-      background-color: skyblue;
-      position: relative;
-      top: -10px;
-    }
-    #pipe4::before{
-      content: "";
-      display: block;
-      height: 10px;
-      width: 30px;
-      background-color: skyblue;
-      position: relative;
-      top: calc(50% - 5px);
-      left: -10px;
-    }
-    #pipe5{
-      display: inline-block;
-      height: 50px;
-      width: 50px;
-      background-color: teal;
-      transition: all 0.5s;
-    }
-    #pipe5::after{
-      content: "";
-      display: block;
-      height: 30px;
-      width: 10px;
-      background-color: skyblue;
-      position: relative;
-      top: -10px;
-    }
-    #pipe5::before{
-      content: "";
-      display: block;
-      height: 10px;
-      width: 30px;
-      background-color: skyblue;
-      position: relative;
-      top: calc(50% - 5px);
-      left: calc(50% - 15px);
-    }
-    #pipe6{
-      display: inline-block;
-      height: 50px;
-      width: 50px;
-      background-color: teal;
-      transition: all 0.5s;
-    }
-    #pipe6::after{
-      content: "";
-      display: block;
-      height: 30px;
-      width: 10px;
-      background-color: skyblue;
-      position: relative;
-      top: calc(50% - 15px);
-    }
-    #pipe6::before{
-      content: "";
-      display: block;
-      height: 10px;
-      width: 30px;
-      background-color: skyblue;
-      position: relative;
-      top: calc(50% - 5px);
-      left: calc(50% - 15px);
-    }
-    #pipe7{
-      display: inline-block;
-      height: 50px;
-      width: 50px;
-      background-color: teal;
-      transition: all 0.5s;
-    }
-    #pipe7::after{
-      content: "";
-      display: block;
-      height: 30px;
-      width: 10px;
-      background-color: skyblue;
-      position: relative;
-      top: calc(50% - 15px);
-    }
-    #pipe7::before{
-      content: "";
-      display: block;
-      height: 10px;
-      width: 30px;
-      background-color: skyblue;
-      position: relative;
-      top: calc(50% - 5px);
-      left: calc(50% - 15px);
-    }
-    #pipe8{
-      display: inline-block;
-      height: 50px;
-      width: 50px;
-      background-color: teal;
-      transition: all 0.5s;
-    }
-    #pipe8::after{
-      content: "";
-      display: block;
-      height: 30px;
-      width: 10px;
-      background-color: skyblue;
-      position: relative;
-      top: -10px;
-    }
-    #pipe8::before{
-      content: "";
-      display: block;
-      height: 10px;
-      width: 30px;
-      background-color: skyblue;
-      position: relative;
-      top: calc(50% - 5px);
-      left: calc(50% - 15px);
-    }
-    #pipe9{
-      display: inline-block;
-      height: 50px;
-      width: 50px;
-      background-color: teal;
-      transition: all 0.5s;
-    }
-    #pipe9::after{
-      content: "";
-      display: block;
-      height: 30px;
-      width: 10px;
-      background-color: skyblue;
-      position: relative;
-      top: calc(50% - 15px);
-    }
-    #pipe9::before{
-      content: "";
-      display: block;
-      height: 10px;
-      width: 30px;
-      background-color: skyblue;
-      position: relative;
-      top: calc(50% - 5px);
-      left: -10px;
-    }
-    .rotateZero{
-      transform : rotate(0deg);
-    }
-    .rotateNinety{
-      transform : rotate(90deg);
-    }
-    .rotateOneEighty{
-      transform : rotate(180deg);
-    }
-    .rotateTwoSeventy{
-      transform : rotate(270deg);
-    }
-    #bucket{
-      height: 30px;
-      width: 40px;
-      border-left: 2px solid brown;
-      border-right: 2px solid brown;
-      border-bottom: 2px solid brown;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      transition: all 2s;
-    }
-    #tap{
-      margin: 10px;
-      height: 5px;
-      width: 20px;
-      background-color: brown;
-    }
-    #tap::before{
-      content: "";
-      display: block;
-      height: 10px;
-      width: 15px;
-      position: relative;
-      top: 5px;
-      transform: rotate(90deg);
-      background-color: brown;
-    }
-    button{
-      margin-top: 10px;
-    }
-    a{
-        text-decoration: none;
-        position: relative;
-        background-color : teal;
-        top: 10vh;
-        padding: 12px;
+<!doctype html>
+<html>
+    <head>
+        <title>Let's Chat </title>
 
-        border-radius: 50px;
-        text-decoration : none;
-        color : white;
-      }
-  </style>
-</head>
-<body>
-  <center>
-    <div id="tap"></div>
-    <div id="base1">
-      <div id="pipe1" onclick="rotatePipe(1)"></div>
-      <div id="pipe2" onclick="rotatePipe(2)"></div>
-      <div id="pipe3" onclick="rotatePipe(3)"></div>
-    </div>
-    <div id="base2">
-      <div id="pipe4" onclick="rotatePipe(4)"></div>
-      <div id="pipe5" onclick="rotatePipe(5)"></div>
-      <div id="pipe6" onclick="rotatePipe(6)"></div>
-    </div>
-    <div id="base3">
-      <div id="pipe7" onclick="rotatePipe(7)"></div>
-      <div id="pipe8" onclick="rotatePipe(8)"></div>
-      <div id="pipe9" onclick="rotatePipe(9)"></div>
-    </div>
-    <div id="bucket"></div>
-    <button onclick="fillTheBucket()">Fill</button>
+<style>
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box ;
+}
+body{
+    height:100vh;
+    width:100%;
+    background:black;
+    background:url("https://source.unsplash.com/random");
+    background-size:cover;
+    background-position:center ;
+    background-repeat:no-repeat ;
+    font-family:serif;
+}
+#load{
+    position:absolute ;
+    height:100vh;
+    width:100%;
+    background:ghostwhite;
+    z-index:999;
+    display:flex;
+    justify-content:center ;
+    align-items:center ;
+    color:white;
+}
+.message{
+
+
+    padding: 3px 7px;
+    color:white;
+    font-size:16px;
+    float: right;
+    box-shadow:2px 2px 10px silver;
+    margin: 4px 0 4px 50vw;
+    border-radius:3px 3px 0px 3px;
+    position:relative ;
+    right:10px;
+    top:65px;
+    font-weight:bolder;
+    background:linear-gradient(to top left,#8B00FF,#f0f);
+}
+.main{
+    background:linear-gradient(to top left,#8B00FF,#f0f);
+    width:100%;
+    height:45px;
+    position:fixed ;
+    bottom:0px;
+    display:flex;
+    justify-content:center ;
+    align-items:center ;
+    z-index:8;
+}
+::placeholder{
+    color:red;
+}
+.r{
+
+
+    padding: 3px 7px;
+
+    float: left;
+    margin: 2px 30vw 0 2px;
+    color:white;
+    border-radius:3px;
+    width:70vw;
+    left:10px;
+    filter:brightnees(200%);
+    font-size:18px;
+    text-shadow:3px 3px 10px purple,
+    -3px -3px 10px #f0f;
+    top:65px;
+    font-weight:bolder;
+    position:relative  ;
+  /*  background: -webkit-linear-gradient(#8b00ff, #f0f,#f00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;   */
+}
+input{
+    color:black;
+    outline:none;
+    z-index:9;
+    border:none;
+}
+#msg{
+    position:fixed  ;
+    left:15px;
+    width:85vw;
+    border-radius:100px;
+    height:30px;
+    outline:none;
+    border:1px solid black;
+    padding-left:10px;
+    padding-right:10px;
+    font-size:15px;
+}
+#btn{
+    position:fixed ;
+    right:12px;
+    height:35px;
+    outline:none;
+    border:none;
+    font-size:32px;
+    background:none;
+    z-index:9;
+}
+#top{
+    position:absolute ;
+    height:60px;
+    width:100%;
+    z-index:9;
+    background:linear-gradient(to top left,#8B00FF,#f0f);
+}
+.dp{
+    position:absolute ;
+    height:60px;
+    width:60px;
+    display:flex;
+    justify-content:center ;
+    align-items:center ;
     
-  </center>
-  <script>
-    var rotation = [0,0,0,0,0,0,0,0,0,0];
-    const p1 = document.querySelector("#pipe1");
-    const p2 = document.querySelector("#pipe2");
-    const p3 = document.querySelector("#pipe3");
-    const p4 = document.querySelector("#pipe4");
-    const p5 = document.querySelector("#pipe5");
-    const p6 = document.querySelector("#pipe6");
-    const p7 = document.querySelector("#pipe7");
-    const p8 = document.querySelector("#pipe8");
-    const p9 = document.querySelector("#pipe9");
-    function rotatePipe(id){
-      let deg = rotation[id];
-      if(deg === 0){
-        switch(id){
-          case 1 : p1.setAttribute('class', 'rotateNinety'); break;
-          case 2 : p2.setAttribute('class', 'rotateNinety'); break;
-          case 3 : p3.setAttribute('class', 'rotateNinety'); break;
-          case 4 : p4.setAttribute('class', 'rotateNinety'); break;
-          case 5 : p5.setAttribute('class', 'rotateNinety'); break;
-          case 6 : p6.setAttribute('class', 'rotateNinety'); break;
-          case 7 : p7.setAttribute('class', 'rotateNinety'); break;
-          case 8 : p8.setAttribute('class', 'rotateNinety'); break;
-          case 9 : p9.setAttribute('class', 'rotateNinety'); break;
+}
+#pic{
+    height:45px;
+    width:45px;
+    border-radius:50%;
+}
+.name{
+    position:absolute ;
+    top:8px;
+    left:66px;
+    font-size:26px;
+    font-weight:bolder;
+    letter-spacing:0.5px;
+    color:white;
+}
+.status{
+    position:absolute ;
+    top:35px;
+    left:70px;
+    font-size:14px;
+    letter-spacing:0.2px;
+    color:aqua;
+}
+.menu{
+    position:absolute ;
+    height:60px;
+    width:40px;
+    right:0;
+    display:flex;
+    justify-content:center ;
+    align-items:center ;
+}
+.fa-gear{
+    font-size:28px;
+    font-weight:bolder;
+    color:white;
+}
+.setting{
+    position:absolute ;
+    height:200px;
+    width:200px;
+    background:black;
+    left:25%;
+    top:-200px;
+    transition:0.7s all;
+    z-index:10;
+    border-radius:10px;
+    background:linear-gradient(to top left,rgba(0,0,0,0.1),rgba(0,0,0,0.2));
+    backdrop-filter:blur(5px) saturate(200%);
+    overflow:hidden ;
+}
+.con{
+    position:absolute ;
+    top:25px;
+}
+span{
+    display:block;
+    font-size:20px;
+    margin-top:10px;
+    margin-left:20px;
+    color:white;
+    font-weight:bolder;
+}
+.cancel{
+    position:absolute ;
+    height:25px;
+    width:100%;
+    display:flex;
+    align-items:center ;
+    color:white;
+}
+.xmark1{
+    right:10px;
+    position:absolute ;
+    font-size:25px;
+    font-weight:bold;
+    color:white;
+}
+.block{
+    position:fixed ;
+    z-index:111;
+    bottom:0;
+    height:45px;
+    color:white;
+    width:100%;
+    background:black;
+    display:flex;
+    justify-content:center ;
+    align-items:center ;
+}
+.profile{
+    position:absolute ;
+    height:100vh;
+    width:100%;
+    background:black;
+    background:url("https://source.unsplash.com/random/800x1200");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat ;
+    z-index:115;
+    transition:0.7s all;
+    display:flex;
+    justify-content:center ;
+    align-items:center ;
+    overflow:hidden ;
+    top:-100vh;
+}
+.topbar{
+    position:absolute ;
+    height:35px;
+    width:100%;
+    display:flex;
+    align-items:center ;
+    background:transparent ;
+    top:10px;
+    left:10px;
+}
+.fa-arrow-left{
+    color:ghostwhite;
+    font-size:30px;
+    position:absolute ;
+    left:15px;
+    height:35px;
+    width:35px;
+    display:flex;
+    align-items:center ;
+    text-shadow:1px 1px 5px black;
+}
+.user{
+    position:relative ;
+    height:400px;
+    width:80vw;
+    border-radius:10px;
+    background:linear-gradient(to top left,rgba(0,0,0,0.1),rgba(0,0,0,0.2));
+    backdrop-filter:blur(5px) saturate(200%);
+    box-shadow:0.2px 0.2px 0 0 aqua,
+    -0.3px -0.3px 0 0 crimson;
+    top:-80px;
+    display:flex;
+    justify-content:center ;
+    align-items:center ;
+}
+.user-pic{
+    height:120px;
+    width:120px;
+    border-radius:50%;
+}
+.user-dp{
+    height:120px;
+    width:120px;
+    border-radius:50%;
+    box-shadow:20px 20px 50px yellow,
+    -20px -20px 50px aqua,
+    20px -20px 50px lime,
+    -20px 20px 50px orange;
+}
+.mfbtn{
+    position:absolute ;
+    height:50px;
+    width:80vw;
+    bottom:25px;
+    display:flex;
+    border-radius:10px;
+    justify-content:center ;
+    align-items:center ;
+}
+#fbtn{
+    position:relative ;
+    outline:none;
+    border:none;
+    height:25px;
+    color:white;
+    box-shadow:2px 2px 5px black;
+    width:70px;
+    font-size:14px;
+    border-radius:5px;
+    font-weight:bolder;
+    margin-right:10px;
+    background:linear-gradient(to top left,#8B00FF,#f0f);
+}
+#mbtn{
+    position:relative ;
+    outline:none;
+    border:none;
+    height:25px;
+    width:70px;
+    color:white;
+    box-shadow:2px 2px 5px black;
+    font-size:14px;
+    font-weight:bolder;
+    border-radius:5px;
+    margin-left:10px;
+    background:linear-gradient(to top left,#8B00FF,#f0f);
+}
+.nam{
+    position:absolute ;
+    height:50px;
+    width:80vw;
+    bottom:80px;
+    display:flex;
+    justify-content:center ;
+    align-items:center ;
+    color:white;
+    font-weight:bold;
+    font-size:30px;
+    text-shadow:1px 1px 5px black;
+}
+.p-cont{
+    position:absolute ;
+    height:100vh;
+    width:100%;
+    display:flex;
+    justify-content:center ;
+    align-items:center ;
+    background:linear-gradient(to top left,rgba(255,255,255,0.1),rgba(255,255,255,0.2));
+    backdrop-filter:blur(5px) saturate(200%);
+}
+
+.msg-blur{
+    position:absolute ;
+    height:100vh;
+    width:100%;
+    background:linear-gradient(to top left,rgba(0,0,0,0.1),rgba(255,255,255,0.2));
+    backdrop-filter:blur(5px) saturate(200%);
+}
+.load-pic{
+    position:relative ;
+    height:120px;
+    width:120px;
+    border-radius:50%;
+    box-shadow:20px 20px 50px yellow,
+    -20px -20px 50px aqua,
+    20px -20px 50px lime,
+    -20px 20px 50px orange;
+    top:-60px;
+}
+.load-text{
+    position:absolute ;
+    height:30px;
+    width:100%;
+    top:100px;
+    display:flex;
+    justify-content:center ;
+    align-items:center ;
+}
+.chat1{
+    color:orange;
+    font-size:35px;
+    margin:0;
+    font-weight:bolder;
+    text-shadow:0px 0px 25px yellow;
+}
+b{
+    color:red;
+    font-size:33px;
+}
+#load-btn{
+    position:absolute ;
+    bottom:150px;
+    outline:none;
+    border:none;
+    height:25px;
+    width:100px;
+    font-weight:bolder ;
+    box-shadow:0 0 30px yellow;
+    color:red;
+    border-radius:100px;
+    font-size:18px;
+    background:linear-gradient(to top left,aqua,yellow);
+    z-index:1;
+    animation:btn 1.3s infinite ;
+}
+@keyframes btn{
+    0%,100% {
+      box-shadow: 0  0 0 0 aqua;
+  }
+  50% {
+      box-shadow: 0 0 10px 20px rgba(0,0,0,0);
+  }
+  100% {
+      box-shadow: 0 0 0 0 rgba(0,0,0,0);
+  }
+}
+#load-btn1{
+    position:absolute ;
+    bottom:150px;
+    outline:none;
+    border:none;
+    height:25px;
+    width:100px;
+    font-weight:bolder ;
+    box-shadow:0 0 30px yellow;
+    color:red;
+    border-radius:100px;
+    font-size:18px;
+    background:linear-gradient(to top left,aqua,yellow);
+}
+
+#eff{
+    position:absolute ;
+    height:10px;
+    width:10px;
+    background:red;
+    border-radius:50%;
+    animation:effect 1s infinite ;
+    z-index:99999;
+}
+@keyframes effect{
+    0%,100% {
+      box-shadow: 0  0 0 0 aqua;
+  }
+  50% {
+      box-shadow: 0 0 10px 20px rgba(0,0,0,0);
+  }
+  100% {
+      box-shadow: 0 0 0 0 rgba(0,0,0,0);
+  }
+}
+.theme{
+    position:absolute ;
+    height:0px;
+    width:0vw;
+    background:linear-gradient(to top left,rgba(0,0,0,0.1),rgba(0,0,0,0.2));
+    backdrop-filter:blur(5px) saturate(200%);    
+    border-radius:10px;
+    transform:translate(-50%,-50%);
+    top:50%;
+    display:flex;
+    justify-content:center ;
+    align-items:center ;
+    left:50%;
+    z-index:115;
+}
+.th{
+    position:absolute ;
+    background:linear-gradient(to top left,#8B00FF,#f0f);
+    height:0px;
+    width:0px;
+    border-radius:50%;
+}
+.th1{
+    left:20px;
+    position:absolute ;
+    background:linear-gradient(to top left,aqua,lime);
+    height:0px;
+    width:0px;
+    border-radius:50%;
+}
+.th2{
+    right:20px;
+    position:absolute ;
+    background:linear-gradient(to top left,red,blue);
+    height:0px;
+    width:0px;
+    border-radius:50%;
+}
+.cancel1{
+    position:absolute  ;
+    right:8px;
+    color:transparent ;
+    top:2px;
+    font-size:20px;
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+            
+        </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onclick="effect()">
+    <div id="load">
+        <img class="load-pic" src="https://api.sololearn.com/Uploads/Avatars/14245547.jpg"/>
+        <div class="load-text">
+            <span class="chat1">Welcome to <b>Chat </b>Bot</span>
+            
+        </div>
+        <button id="load-btn">Loading</button>
+        <button id="load-btn1">Chat now</button>
+    </div>
+    <header id="top">
+        <div class="dp" id="d-p">
+            <img id="pic" src="dp.jpg"/>
+        </div>
+        <div class="name">Adeel</div>
+        <div class="status" id="status">online</div>
+        <div class="menu" id="menu">
+            <i class="fa-solid fa-gear"></i>
+        </div>
+        <div class="setting" id="setting">
+        <div class="cancel">
+            <i class="fa-solid fa-xmark xmark1" id="cancel"></i>
+        </div>
+            <div class="con">
+                <span id="see">See Profile</span>
+            <span id="report">Report</span>
+            <span id="block">Block</span>
+            <span id="theme">Theme</span>
+            </div>
+        </div>
+    </header>
+    <div class="theme">
+    <div class="cancel1">
+            <i class="fa-solid fa-xmark cancel2" id="cancel1"></i>
+        </div>
+        <span class="th"></span>
+        <span class="th1"></span>
+        <span class="th2"></span>
+    </div>
+    
+    <div class="profile" id="profile">
+    <div class="p-cont">
+        <div class="topbar">
+            <i class="fa-solid fa-arrow-left" id="back"></i>
+        </div>
+        <div class="user">
+            <div class="user-pic">
+                <img class="user-dp" src="dp.jpg"/>
+            </div>
+        
+         <div class="nam">Somu</div>
+        
+        <div class="mfbtn">
+         <a href="https://instagram.com/abdullah_0.1.2?utm_medium=copy_link"><button id="fbtn">Follow</button></a>
+         <a href="https://instagram.com/abdullah_0.1.2?utm_medium=copy_link"><button id="mbtn">Message</button></a>
+         </div>
+    </div>
+    </div>
+    </div>
+    <div class="main" id="main2">
+
+        <input type="text" placeholder="Write your message" id="msg">
+        <button id="btn" onclick="msggg()" disabled><i class="fa-solid fa-paper-plane" id="btn1"></i></button>
+        </div>
+    </body>
+    <script>
+    function msggg() {
+    var msgss = document.getElementById("msg").value;
+    msg = msgss.toLowerCase()
+    var div = document.createElement("div");
+     var div1 = document.createElement("div");
+    var btn = document.getElementById("btn")
+    var btn1 = document.getElementById("btn1")
+    var reply
+    div.className = "message";
+    div.id = "mesage"
+    div1.className = "r";
+    var text = document.createTextNode(msg);
+    div.appendChild(text);
+    document.body.appendChild(div);
+    document.getElementById("msg").value = "";
+    document.getElementById("msg").focus();     
+    btn.disabled = true;      
+    btn1.style.color = "ghostwhite"
+    if(msg==""){
+        document.body.removeChild(div)
+        btn1.style.color = "ghostwhite"
+    }
+         if(msg=="" || msg==null){
+             reply = ""
+         }
+         else if(msg=="Hi" || msg=="hi" || msg=="hii" || msg=="Hii" || msg=="Hello" || msg=="hello" || msg=="halo" || msg=="hola" || msg=="Hola"){
+             reply="Hii there!"
+         }
+         else if(msg=="hru" || msg=="Hru" || msg=="how are you" || msg=="How are you" || msg=="how r u" || msg=="H r u" || msg=="how about you" || msg=="How are you"){
+             reply = "I'm fine 🤗"
+         }
+         else if(msg=="Ok" || msg=="ok" || msg=="Okay"|| msg=="okay" || msg=="Okk" || msg=="okk"){
+             reply = "Okay 👍"
+         }
+         else if(msg=="Gm" || msg=="gm" || msg=="Good Morning" || msg=="good morning" || msg=="Good morning" || msg=="GM"){
+             reply = "Good Morning 🌞"
+         }
+         else if(msg=="Ga" || msg=="ga" || msg=="Good Afternoon" || msg=="good afternoon" || msg=="GA" || msg=="Good afternoon"){
+             reply = "Good Afternoon 😊"
+         }
+         else if(msg=="Ge" || msg=="ge" || msg=="Good Evening" || msg=="good evening" || msg=="GE" || msg=="Good evening"){
+             reply = "Good Evening 💕"
+         }
+         else if(msg=="Gn" || msg=="gn" || msg=="Good Night" || msg=="good night" || msg=="GN" || msg=="Good night"){
+             reply = "Good Night 😴"
+         }
+         else if(msg=="thanks" || msg=="thank you" || msg=="Thanks" || msg=="Thank you" || msg=="Thank You" || msg=="thx" || msg=="Thx" || msg=="tq" || msg=="Tq"){
+             reply = "Thank you so much 😊"
+         }
+         else if(msg=="bye" || msg=="Bye" || msg=="by" || msg=="By" ||msg=="byy" || msg=="Byy"){
+             reply = "Okay Bye take care 😊"
         }
-        rotation[id] = 90;
-      }
-      else if(deg === 90){
-        switch(id){
-          case 1 : p1.setAttribute('class', 'rotateOneEighty'); break;
-          case 2 : p2.setAttribute('class', 'rotateOneEighty'); break;
-          case 3 : p3.setAttribute('class', 'rotateOneEighty'); break;
-          case 4 : p4.setAttribute('class', 'rotateOneEighty'); break;
-          case 5 : p5.setAttribute('class', 'rotateOneEighty'); break;
-          case 6 : p6.setAttribute('class', 'rotateOneEighty'); break;
-          case 7 : p7.setAttribute('class', 'rotateOneEighty'); break;
-          case 8 : p8.setAttribute('class', 'rotateOneEighty'); break;
-          case 9 : p9.setAttribute('class', 'rotateOneEighty'); break;
+         else if(msg=="take care" || msg=="Take Care" || msg=="Take care" || msg=="tc" || msg=="TC" || msg=="Tc"){
+             reply = "You also take care 🙂"
+         }
+         else if(msg=="Aur btao" || msg=="aur btao"){
+             reply = "kya btau mst hu bindass hu aap hi kuch btao 😂"
+         }
+         else{
+             reply = "I don't understand"
+         }
+          var txt = document.createTextNode(reply)
+          div1.appendChild(txt)
+          var t = Math.random(1.8)+0.6
+          var time = t*1000
+          setTimeout(rec,time)
+          function rec(){
+          document.body.appendChild(div1);
+          
         }
-        rotation[id] = 180;
-      }
-      else if(deg === 180){
-        switch(id){
-          case 1 : p1.setAttribute('class', 'rotateTwoSeventy'); break;
-          case 2 : p2.setAttribute('class', 'rotateTwoSeventy'); break;
-          case 3 : p3.setAttribute('class', 'rotateTwoSeventy'); break;
-          case 4 : p4.setAttribute('class', 'rotateTwoSeventy'); break;
-          case 5 : p5.setAttribute('class', 'rotateTwoSeventy'); break;
-          case 6 : p6.setAttribute('class', 'rotateTwoSeventy'); break;
-          case 7 : p7.setAttribute('class', 'rotateTwoSeventy'); break;
-          case 8 : p8.setAttribute('class', 'rotateTwoSeventy'); break;
-          case 9 : p9.setAttribute('class', 'rotateTwoSeventy'); break;
+        var status = document.getElementById("status")
+          status.textContent="typing..."
+          var t = Math.random(1.8)+0.6
+          var time = t*1000
+          setTimeout(rem,time)
+          function rem(){
+          status.textContent = "online"
         }
-        rotation[id] = 270;
+}
+    window.onload = function(){
+    var msgs = document.getElementById("msg");
+    var btn1 = document.getElementById("btn1")
+    btn1.style.color = "ghostwhite"
+    loading()
+    msgs.addEventListener("input", check);
+    function check(){
+    if(msg != null){
+        btn.disabled = false;
+        btn1.style.color = "green";
+        }
+    }
+   function loading(){
+        var loadbtn = document.getElementById("load-btn");
+        loadbtn.style.display = "none"
+  }       
+}
+  var div3 = document.createElement("div");
+    div3.className = "msg-blur";
+    document.body.appendChild(div3);
+  var topHeader = document.getElementById("top")
+  var main2 = document.getElementById("main2")
+  var mbtn = document.getElementById("mbtn")
+  var fbtn = document.getElementById("fbtn")
+  var menu = document.getElementById("menu")
+  var theme = document.getElementById("theme")
+  var cancel1 = document.getElementById("cancel1")
+  var back = document.getElementById("back")
+  var d_p = document.getElementById("d-p")
+  var see = document.getElementById("see")
+  var profile = document.getElementById("profile")
+  var cancel = document.getElementById("cancel")
+  var block = document.getElementById("block")
+  var them = document.querySelector(".theme")
+  var th = document.querySelector(".th");
+  var th1 = document.querySelector(".th1");
+  var th2 = document.querySelector(".th2");
+  var setting = document.getElementById("setting")
+  var report = document.getElementById("report")
+  menu.onclick = function(){
+     setting.style.transform="translatey(50vh)"
+    }
+   theme.onclick = function(){
+     setting.style.transform="translatey(-200px)"
+     them.style.height = "100px"
+     them.style.width = "70vw"
+     th.style.height = "40px"
+     th.style.width = "40px"
+     th1.style.height = "40px"
+     th1.style.width = "40px"
+     th2.style.height = "40px"
+     th2.style.width = "40px"
+     cancel1.style.color = "white"
+  }
+  cancel1.onclick = function(){
+      them.style.height = "0"
+      them.style.width = "0"
+      th.style.height = "0px"
+     th.style.width = "0px"
+     th1.style.height = "0px"
+     th1.style.width = "0px"
+     th2.style.height = "0px"
+     th2.style.width = "0px"
+     cancel1.style.color = "transparent"
+  }
+  
+  th1.onclick = function(){
+      topHeader.style.background = "linear-gradient(to top left ," + "aqua" + "," + "lime" + ")";
+      main2.style.background = "linear-gradient(to top left ," + "aqua" + "," + "lime" + ")";
+mbtn.style.background = "linear-gradient(to top left ," + "aqua" + "," + "lime" + ")";
+fbtn.style.background = "linear-gradient(to top left ," + "aqua" + "," + "lime" + ")";
+
+  }
+  th.onclick = function(){
+      topHeader.style.background = "linear-gradient(to top left ," + "#8b00ff" + "," + "#f0f" + ")";
+      main2.style.background = "linear-gradient(to top left ," + "#8b00ff" + "," + "#f0f" + ")";
+mbtn.style.background = "linear-gradient(to top left ," + "#8b00ff" + "," + "#f0f" + ")";
+fbtn.style.background = "linear-gradient(to top left ," + "#8b00ff" + "," + "#f0f" + ")";
+
+  }
+  th2.onclick = function(){
+      topHeader.style.background = "linear-gradient(to top left ," + "red" + "," + "blue" + ")";
+      main2.style.background = "linear-gradient(to top left ," + "red" + "," + "blue" + ")";
+    mbtn.style.background = "linear-gradient(to top left ," + "red" + "," + "blue" + ")";
+    fbtn.style.background = "linear-gradient(to top left ," + "red" + "," + "blue" + ")";
+    
+  }
+   cancel.onclick = function(){
+     setting.style.transform="translatey(-200px)"
+  }
+  report.onclick = function(){
+     setting.style.transform="translatey(-200px)"
+     alert("Your report has been submitted successfully!!!")
+  }
+  block.onclick = function(){
+      var x = document.getElementById("block")
+      if(x.innerHTML==="Block"){
+          x.innerHTML="Unblock"
+          var div2 = document.createElement("div");
+      setting.style.transform="translatey(-400px)"
+      var blk = "You can't responds to this conversation"
+      div2.className ="block";
+      div2.id = "xyz"
+      var btext = document.createTextNode(blk)
+      div2.appendChild(btext)
+      document.body.appendChild(div2)
       }
       else{
-        switch(id){
-          case 1 : p1.setAttribute('class', 'rotateZero'); break;
-          case 2 : p2.setAttribute('class', 'rotateZero'); break;
-          case 3 : p3.setAttribute('class', 'rotateZero'); break;
-          case 4 : p4.setAttribute('class', 'rotateZero'); break;
-          case 5 : p5.setAttribute('class', 'rotateZero'); break;
-          case 6 : p6.setAttribute('class', 'rotateZero'); break;
-          case 7 : p7.setAttribute('class', 'rotateZero'); break;
-          case 8 : p8.setAttribute('class', 'rotateZero'); break;
-          case 9 : p9.setAttribute('class', 'rotateZero'); break;
-        }
-        rotation[id] = 0;
+          x.innerHTML="Block"
+          setting.style.transform="translatey(-400px)"
+          var div = document.getElementById("xyz");
+    while (div) {
+    div.parentNode.removeChild(div);
+    div = document.getElementById('xyz');
+}
       }
+  }
+  back.onclick = function(){
+     profile.style.transform="translatey(00vh)"
+  }
+    see.onclick = function(){
+      profile.style.transform="translatey(100vh)"
+      setting.style.transform="translatey(-400px)"
+  }
+    d_p.onclick = function(){
+        profile.style.transform="translatey(100vh)"
     }
-    function fillTheBucket(){
-      if(rotation[1]==90 && rotation[2]==180 && (rotation[4]==180 || rotation[4]==0) && rotation[7]==270 && rotation[8]==180){
-        alert("good job, You won");
-        const bkt = document.querySelector("#bucket");
-        bkt.style.backgroundColor = "skyblue";
-        setTimeout(show, 1000);
-      }
-      else{
-        alert("Oops, try again");
-        const bkt = document.querySelector("#bucket");
-        bkt.style.backgroundColor = "";
-      }
-    }
-    function show(){
-        alert("dont forget to upvote..❤️");
-    }
-  </script>
-</body>
+    function effect(){
+    var s = document.createElement('div');
+    s.setAttribute('id','eff'),
+    document.body.appendChild(s),
+    s.style.top = event.pageY + 'px',
+    s.style.left = event.pageX + 'px',
+    setTimeout(function(){
+        document.body.removeChild(s)
+    },300)
+};
+    $(document).ready(function(){
+           $('#load-btn1').click(function(){
+             $('#load').fadeOut(1000);
+          })
+    }); 
+    
+    </script>
 </html>
